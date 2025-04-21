@@ -1,0 +1,142 @@
+most correct 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicted Rent</title>
+</head>
+<body>
+    <h2>Predicted House Rent</h2>
+    <p><strong>Total Rooms:</strong> {{ total_rooms }}</p>
+    <p><strong>City:</strong> {{ city }}</p>
+    <p><strong>Furnishing:</strong> {{ furnishing }}</p>
+    <p><strong>Size (sq. ft):</strong> {{ size }}</p>
+    <p><strong>Tenant Preferred:</strong> {{ tenant }}</p>
+    <p><strong>Area Type:</strong> {{ area_type }}</p>
+    
+    Estimated Rent: ₹{{ "%.2f"|format(rent) }}
+
+
+    <img src="{{ url_for('static', filename='images/rent_graph.png') }}" alt="Rent Prediction Graph">
+
+
+
+    <a href="/">Go Back</a>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicted Rent</title>
+</head>
+<body>
+    <h2>Predicted House Rent</h2>
+    <p><strong>Total Rooms:</strong> {{ total_rooms }}</p>
+    <p><strong>City:</strong> {{ city }}</p>
+    <p><strong>Furnishing:</strong> {{ furnishing }}</p>
+    <p><strong>Size (sq. ft):</strong> {{ size }}</p>
+    <p><strong>Tenant Preferred:</strong> {{ tenant }}</p>
+    <p><strong>Area Type:</strong> {{ area_type }}</p>
+    
+    <h3>Estimated Rent: ₹{{ "%.2f"|format(rent) }}</h3>
+
+    <a href="/">🔙 Go Back</a>
+</body>
+</html>
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- most correct 2 -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicted Rent</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h2>🏠 Predicted House Rent</h2>
+    <p><strong>City:</strong> {{ city }}</p>
+    <p><strong>Size:</strong> {{ size }} sq. ft</p>
+    <p><strong>BHK:</strong> {{ bhk }}</p>
+    <p><strong>Bathrooms:</strong> {{ bathroom }}</p>
+    <p><strong>Floor:</strong> {{ floor }}</p>
+    <p><strong>Furnishing:</strong> {{ furnishing }}</p>
+    <p><strong>Area Type:</strong> {{ area_type }}</p>
+
+    <h3>💰 Estimated Rent: ₹{{ "%.2f"|format(rent) }}</h3>
+
+    <a href="/">🔙 Predict Again</a>
+</body>
+</html>
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Predicted Rent</title>
+ </head>
+ <body>
+   <h2>🏠 Predicted Rent</h2>
+   <p><strong>City:</strong> {{ city }}</p>
+   <p><strong>Locality:</strong> {{ locality }}</p>
+   <p><strong>Size:</strong> {{ size }} sq. ft</p>
+   <p><strong>BHK:</strong> {{ bhk }}</p>
+   <p><strong>Bathrooms:</strong> {{ bathroom }}</p>
+   <p><strong>Floor:</strong> {{ floor }}</p>
+   <p><strong>Furnishing:</strong> {{ furnishing }}</p>
+   <h3>💰 Estimated Rent: {{ rent }}</h3>
+   <a href="/">🔙 Predict Again</a>
+ </body>
+ </html>
+  -->

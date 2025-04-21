@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Styling */
+h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input and Button Styling */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input[type="number"], select {
+    background: #f9f9f9;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Labels */
+label {
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+    margin-top: 12px;
+    display: block;
+}
+
+/* Footer Styling */
+.footer {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Result Page Styles */
+.result-box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+h3 {
+    color: #28a745;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #218838;
+    font-size: 18px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+a:hover {
+    color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+    }
+}

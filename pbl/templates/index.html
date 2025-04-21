@@ -1,0 +1,357 @@
+ 
+
+<!-- MOST CORRECT -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🏠 House Rent Prediction</h2>
+        <form action="/predict" method="post">
+            <label>Size (sq ft):</label>
+            <input type="number" name="size" required>
+
+            <label>BHK:</label>
+            <input type="number" name="bhk" required>
+
+            <label>Number of Bathrooms:</label>
+            <input type="number" name="bathroom" required>
+
+            <label>Floor:</label>
+            <input type="number" name="floor" required>
+
+
+
+
+            <label>City:</label>
+            <select name="city" required>
+               {% for city in cities %}
+                  <option value="{{ city }}">{{ city }}</option>
+                  {% endfor %}
+            </select>
+
+
+
+
+
+            <label>Furnishing Status:</label> 
+            <select name="furnishing" required>
+                <option value="Furnished">Furnished</option>
+                <option value="Semi-Furnished">Semi-Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+            </select>
+
+            <label>Area Type:</label>
+            <select name="area" required>
+                <option value="Super Area">Super Area</option>
+                <option value="Carpet Area">Carpet Area</option>
+                <option value="Built Area">Built Area</option>
+            </select>
+
+            <button type="submit">Predict Rent</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h3>🏠 Estimated Rent: {{ prediction }}</h3>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- most correct 2 -->
+
+
+<!-- 
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Rent Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🏠 House Rent Prediction</h2>
+        <form action="/predict" method="post">
+            <label>Size (sq ft):</label>
+            <input type="number" name="size" required>
+
+            <label>BHK:</label>
+            <input type="number" name="bhk" required>
+
+            <label>Number of Bathrooms:</label>
+            <input type="number" name="bathroom" required>
+
+            <label>Floor:</label>
+            <input type="number" name="floor" required>
+
+            <label>Furnishing Status:</label>
+            <select name="furnishing" required>
+                <option value="Furnished">Furnished</option>
+                <option value="Semi-Furnished">Semi-Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+            </select>
+
+            <label>Area Type:</label>
+            <select name="area" required>
+                <option value="Super Area">Super Area</option>
+                <option value="Carpet Area">Carpet Area</option>
+                <option value="Built Area">Built Area</option>
+            </select>
+
+            <label>City:</label>
+            <select name="city" required>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+
+            <button type="submit">Predict Rent</button>
+        </form>
+    </div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Rent Prediction</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+    }
+    .container {
+        background: white;
+        padding: 20px;
+        width: 50%;
+        margin: auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>🏠 House Rent Prediction</h2>
+  <form action="/predict" method="POST">
+    <label>City:</label>
+    <select name="city" id="city" onchange="updateLocalities()" required>
+      {% for city in cities %}
+        <option value="{{ city }}">{{ city }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Area Locality:</label>
+    <select name="area_locality" id="area_locality" required>
+     Will be dynamically populated -->
+    <!-- </select>
+
+    <label>Size (sq ft):</label>
+    <input type="number" name="size" required>
+
+    <label>BHK:</label>
+    <input type="number" name="bhk" required>
+
+    <label>Number of Bathrooms:</label>
+    <input type="number" name="bathroom" required>
+
+    <label>Floor:</label>
+    <input type="number" name="floor" required>
+
+    <label>Furnishing Status:</label>
+    <select name="furnishing" required>
+      <option value="Furnished">Furnished</option>
+      <option value="Semi-Furnished">Semi-Furnished</option>
+      <option value="Unfurnished">Unfurnished</option>
+    </select>
+
+    <button type="submit">Predict Rent</button>
+  </form>
+</div>
+
+<script>
+  const cityLocalityMap = {{ city_locality_map | safe }};
+
+  function updateLocalities() {
+    const city = document.getElementById("city").value;
+    const areaSelect = document.getElementById("area_locality");
+    areaSelect.innerHTML = ""; // clear previous options
+
+    cityLocalityMap[city].forEach(function(locality) {
+      const option = document.createElement("option");
+      option.value = locality;
+      option.text = locality;
+      areaSelect.add(option);
+    });
+  }
+
+  // Call on load to set initial localities
+  window.onload = updateLocalities;
+</script>
+
+</body>
+</html> --> -->
